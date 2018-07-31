@@ -1,0 +1,1 @@
+docker run -d --name bitwarden -v /bitwarden/:/data/ -p 80:80 peterjankovsky/bitwarden

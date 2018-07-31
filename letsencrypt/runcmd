@@ -1,0 +1,1 @@
+docker run -e EMAIL=peter@jankovsky.me -e DOMAINS=pw1.jankovsky.me -v /etc/letsencrypt/:/etc/letsencrypt/ -p 80:80 peterjankovsky/letsencrypt
