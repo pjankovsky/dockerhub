@@ -1,1 +1,3 @@
+#!/bin/bash
+docker build . -t peterjankovsky/bitwarden:latest
 docker run -d --name bitwarden -v /bitwarden/:/data/ -p 80:80 -p 443:443 peterjankovsky/bitwarden
