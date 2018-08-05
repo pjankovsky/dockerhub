@@ -1,3 +1,14 @@
 #!/bin/bash
+
+# Update root image
+docker pull mprasil/bitwarden:latest
+
+# Stop and remove the old container
+docker stop bitwarden
+docker rm bitwarden
+
+# Rebuild the wrapping container
 docker build . -t peterjankovsky/bitwarden:latest
+
+# Start it up
 docker run -d --name bitwarden -v /bitwarden/:/data/ -p 80:80 -p 443:443 peterjankovsky/bitwarden
